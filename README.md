@@ -41,7 +41,7 @@ This project implements **EcoFair-CH-MARL**, a multi-agent reinforcement learnin
 ## 2. Installation
 
 1.  **Prerequisites:** Ensure you have Python 3.8+ installed.
-2.  **Save the Code:** Save the provided Python script as `multi_agent_maritime_full.py`.
+2.  **Save the Code:** Save the provided Python script as `EcoFairCHMARL.py`.
 3.  **Install Dependencies:** Open your terminal or command prompt and run:
     ```bash
     pip install gymnasium numpy pandas matplotlib stable-baselines3
@@ -60,7 +60,7 @@ The simulation can be run from the command line with various options to configur
 To run the simulation with default settings (PPO algorithm, no emission cap, no fairness penalty applied directly in the environment, 1000 episodes, 8 ports, 20 vessels, and a high-level update interval of 5 steps):
 
 ```bash
-python multi_agent_maritime_full.py
+python EcoFairCHAMRL.py
 ```
 
 ### Command-Line Arguments
@@ -125,7 +125,7 @@ The `--debug` flag provides extensive print statements during the simulation, wh
 
 To enable debugging:
 ```bash
-python multi_agent_maritime_full.py --fairness --debug --hl_update_interval 1
+python EcoFairCHMARL.py --fairness --debug --hl_update_interval 1
 ```
 
 ## 4. Ablation Studies
@@ -134,32 +134,32 @@ Ablation studies allow you to isolate the impact of different components of the 
 
 *   **Baseline (No Emission Cap, No Fairness):**
     ```bash
-    python multi_agent_maritime_full.py --episodes 2000
+    python EcoFairCHMARL.py --episodes 2000
     ```
 *   **Emission Cap Only:**
     ```bash
-    python multi_agent_maritime_full.py --emission_cap --episodes 2000
+    python EcoFairCHMARL.py --emission_cap --episodes 2000
     ```
 *   **Fairness Only (using environment's direct penalty):**
     ```bash
-    python multi_agent_maritime_full.py --fairness --episodes 2000
+    python EcoFairCHMARL.py --fairness --episodes 2000
     ```
 *   **Fairness Only (using SOTO reward wrapper):**
     ```bash
-    python multi_agent_maritime_full.py --algo SOTO --episodes 2000
+    python EcoFairCHMARL.py --algo SOTO --episodes 2000
     ```
 *   **Fairness Only (using FEN reward wrapper):**
     ```bash
-    python multi_agent_maritime_full.py --algo FEN --episodes 2000
+    python EcoFairCHMARL.py --algo FEN --episodes 2000
     ```
 *   **Both Emission Cap and Fairness:**
     ```bash
-    python multi_agent_maritime_full.py --emission_cap --fairness --episodes 2000
+    python EcoFairCHMARL.py --emission_cap --fairness --episodes 2000
     ```
 *   **Varying Fairness Weight (`lambda_fair`):**
     ```bash
-    python multi_agent_maritime_full.py --fairness --lambda_fair 5.0 --episodes 2000
-    python multi_agent_maritime_full.py --fairness --lambda_fair 20.0 --episodes 2000
+    python EcoFairCHMARL.py --fairness --lambda_fair 5.0 --episodes 2000
+    python EcoFairCHMARL.py --fairness --lambda_fair 20.0 --episodes 2000
     ```
 
 Remember to adjust `--episodes` as needed for sufficient training time.
@@ -180,7 +180,7 @@ This is a separate, simplified toy model that demonstrates the concept of conver
 To run this experiment:
 
 ```bash
-python multi_agent_maritime_full.py --convergence
+python EcoFairCHMARL.py --convergence
 ```
 
 This will generate a plot (`CHMARL_Refined_Fairness.png`) in your output directory visualizing the approximation.
