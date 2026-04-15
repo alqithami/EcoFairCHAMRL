@@ -1,4 +1,7 @@
 # EcoFair-CH-MARL: Scalable Constrained Hierarchical Multi-Agent RL for Maritime Logistics
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.14625-b31b1b.svg)](https://arxiv.org/abs/2603.14625 )
 
 This project implements **EcoFair-CH-MARL**, a multi-agent reinforcement learning (MARL) framework designed to simulate and optimize maritime logistics operations. It focuses on achieving simultaneous efficiency, environmental sustainability through real-time emission budgets, and equitable resource distribution via fairness guarantees. The framework incorporates a novel hierarchical control structure within a realistic digital twin environment, addressing complexities and stochasticities inherent in real-world maritime scenarios.
 
